@@ -81,4 +81,78 @@ body {
     font-size: 18px;
     padding: 10px 20px;
   }
+
+.aproposedemoi{
+  padding: 40px;
+  width: 100%;
+  top: 40px;
   
+}
+/* Styles pour les écrans de taille inférieure à 768px (taille mobile) */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px; /* Réduire l'espacement du header */
+  }
+
+  .logo img {
+    max-width: 80px; /* Réduire la taille du logo pour les petits écrans */
+  }
+
+  nav ul {
+    display: none; /* Masquer la navigation principale */
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff; /* Ajouter un fond blanc pour le menu mobile */
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+  }
+
+  nav ul.active {
+    display: flex; /* Afficher la navigation en mode mobile */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .menu-toggle img {
+    width: 30px; /* Taille de l'image du menu hamburgueur */
+  }
+}
+
+/* Styles pour les écrans plus larges (iPad Pro, ordinateurs, etc.) */
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* Masquer le menu hamburger pour les écrans plus larges */
+  }
+
+  nav ul {
+    display: flex !important; /* Assurez-vous que la navigation principale est visible */
+  }
+}
+/* Styles pour les écrans de taille spécifique (iPad mini, etc.) */
+@media screen and (max-width: 768px) and (min-resolution: 163dpi) {
+  .menu-toggle img {
+    width: 20px; /* Ajuster la taille de l'image du menu hamburger pour les iPad mini */
+  }
+}
