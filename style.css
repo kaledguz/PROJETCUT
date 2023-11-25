@@ -156,3 +156,23 @@ body {
     width: 20px; /* Ajuster la taille de l'image du menu hamburger pour les iPad mini */
   }
 }
+/* Vos styles CSS existants restent inchangés */
+
+/* Ajoutez un style pour le menu transparent */
+.transparent-menu {
+  background-color: rgba(255, 255, 255, 0.7); /* Couleur de fond transparente */
+  transition: background-color 0.3s ease-in-out; /* Transition pour une apparition fluide */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Ajoutez un style pour compenser l'espace lorsque le menu devient transparent */
+.main-content {
+  padding-top: 100px; /* Ajustez la valeur en fonction de la hauteur de votre menu */
+}
+section{
+  width: 100%;
+}
